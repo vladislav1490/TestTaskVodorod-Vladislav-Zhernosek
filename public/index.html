@@ -7,6 +7,60 @@
     <title>Document</title>
 </head>
 <body class="index-page">
-
+    <div class="container">
+        <h1>Exchange Rates</h1>
+        <div class="checkboxes">
+            <label>
+                <input type="checkbox" id="show-browser-info" checked>
+                Show Browser Info
+            </label>
+            <label>
+                <input type="checkbox" id="show-rates" checked>
+                Show Exchange Rates
+            </label>
+            <label>
+                <input type="checkbox" id="show-dynamics" checked>
+                Show Exchange Rate Dynamics
+            </label>
+            <label>
+                <input type="checkbox" id="show-converter" checked>
+                Show Currency Converter
+            </label>
+        </div>
+        <button id="share">Share</button>
+        <div id="browser-info" class="content"></div>
+        <div id="exchange-rates" class="content"></div>
+        <div id="exchange-dynamics" class="content">
+            <h2>Exchange Rate Dynamics</h2>
+            <div class="date-range">
+                <label for="start-date">From:</label>
+                <input type="date" id="start-date">
+                <label for="end-date">To:</label>
+                <input type="date" id="end-date">
+            </div>
+            <div class="currency-select">
+                <label for="currency">Currency:</label>
+                <select id="currency"></select>
+            </div>
+            <div><button id="fetch-dynamics">Fetch Dynamics</button></div>
+            <div id="dynamics-results"></div>
+        </div>
+        <div id="currency-converter" class="content">
+            <h2>Currency Converter</h2>
+            <div class="converter">
+                <div class="converter-field">
+                    <label for="currency-a">Currency A:</label>
+                    <select id="currency-a"></select>
+                    <input type="number" id="amount-a" placeholder="Amount in Currency A">
+                </div>
+                <div class="converter-field">
+                    <label for="currency-b">Currency B:</label>
+                    <select id="currency-b"></select>
+                    <input type="number" id="amount-b" placeholder="Amount in Currency B">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/script.js" type="module"></script>
 </body>
 </html>

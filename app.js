@@ -5,6 +5,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use('/css', express.static(path.join(__dirname, 'css')));
 app.use('/js', express.static(path.join(__dirname, 'js')));
+app.use('/js/components', express.static(path.join(__dirname, 'js', 'components')));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
